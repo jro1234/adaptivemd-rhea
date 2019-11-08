@@ -579,6 +579,9 @@ class Worker(StorableMixin):
         return obj
 
     def create(self, project):
+        if not project._current_configuration:
+            project.set_current_configuration('rhea')
+
         scheduler = WorkerScheduler(project._current_configuration, self.verbose)
         scheduler._state_cb = self._state_cb
         self._scheduler = scheduler

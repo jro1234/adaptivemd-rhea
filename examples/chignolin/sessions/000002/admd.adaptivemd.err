@@ -1,0 +1,29 @@
+[ 2019-09-13 14:42:15.00085 ] __main__ :: INFO :: 63 ||  Initializing Project named: chignolin
+[ 2019-09-13 14:42:15.00085 ] __main__ :: INFO :: 64 ||  Recieved Arguments:
+Namespace(after_n_trajs=None, all=10, analysis_cfg='cfg/analysis.yaml', batchsize=999999, batchsleep=5, batchwait=False, config='admd.yaml', dburl='mongodb://localhost:27017/', features_cfg='cfg/features.yaml', fixedlength=False, init_only=False, length=100, min_model_trajlength=0, minlength=100, minutes=0, modeller=None, n_rounds=1, n_traj=0, persist=False, platform='CPU', progression='any', project_name='chignolin', prot=2, rc=None, rescue_only=True, rescue_tasks=False, round_n=1, rp=False, sampling_method='explore_macrostates', submit_only=False, system_name=None, threads=1)
+[ 2019-09-13 14:42:15.00085 ] __main__ :: INFO :: 65 ||  Project opening
+[ 2019-09-13 14:42:15.00085 ] adaptivemd.runtime.initialize_project :: INFO :: 20 ||  This run is using config file: admd.yaml
+[ 2019-09-13 14:42:15.00085 ] adaptivemd.runtime.initialize_project :: INFO :: 25 ||  Set ADMD_DBURL to: mongodb://172.30.144.4:33234/
+[ 2019-09-13 14:42:15.00091 ] adaptivemd.runtime.initialize_project :: INFO :: 32 ||  Project chignolin exists, reading it from database
+[ 2019-09-13 14:42:15.00254 ] __main__ :: INFO :: 80 ||  AdaptiveMD dburl: mongodb://172.30.144.4:33234/
+[ 2019-09-13 14:42:15.00260 ] __main__ :: INFO :: 84 ||  number of project.trajectories: 4
+[ 2019-09-13 14:42:15.00260 ] __main__ :: INFO :: 88 ||  number of project.models: 1
+[ 2019-09-13 14:42:15.00261 ] __main__ :: INFO :: 109 ||  Checking for pre-existing, runnable tasks
+[ 2019-09-13 14:42:15.00299 ] __main__ :: INFO :: 113 ||  Found 4 incomplete tasks to run
+[ 2019-09-13 14:42:15.00299 ] __main__ :: INFO :: 129 ||  Continuing to execute runnable incomplete tasks
+[ 2019-09-13 14:42:15.00299 ] __main__ :: INFO :: 150 ||  Configuring workload
+[ 2019-09-13 14:42:15.00307 ] __main__ :: INFO :: 180 ||  Looking to clean up unfinished tasks: task states: {'queued': 4, 'dummy': 1, 'success': 5}
+[ 2019-09-13 14:42:15.00320 ] __main__ :: INFO :: 196 ||  After fixes: task states: {'created': 4, 'dummy': 1, 'success': 5}
+[ 2019-09-13 14:42:15.00322 ] __main__ :: INFO :: 213 ||  Found 4 tasks to execute in cleanup
+[ 2019-09-13 14:42:15.00322 ] __main__ :: INFO :: 234 ||  n_rounds: 1
+[ 2019-09-13 14:42:15.00322 ] __main__ :: INFO :: 271 ||  Project event adding from incomplete tasks
+[<adaptivemd.engine.engine.TrajectoryGenerationTask object at 0x7f4b01db0d30>, <adaptivemd.engine.engine.TrajectoryGenerationTask object at 0x7f4b01db0e48>, <adaptivemd.engine.engine.TrajectoryGenerationTask object at 0x7f4b01db0278>, <adaptivemd.engine.engine.TrajectoryGenerationTask object at 0x7f4b01db0e80>]
+[ 2019-09-13 14:42:15.00322 ] adaptivemd.project :: INFO :: 816 ||  Events added. Remaining 1
+[ 2019-09-13 14:42:15.00343 ] __main__ :: INFO :: 282 ||  [<adaptivemd.plan.ExecutionPlan object at 0x7f4b01ddfe10>]
+[ 2019-09-13 14:42:15.00343 ] __main__ :: INFO :: 284 ||  Project event added
+[ 2019-09-13 14:42:15.00343 ] __main__ :: INFO :: 297 ||  Project waiting on completion event for last workload
+[ 2019-09-13 14:43:20.00991 ] adaptivemd.project :: INFO :: 849 ||  Event finished! Remaining 0
+[ 2019-09-13 14:43:26.00095 ] __main__ :: INFO :: 299 ||  Project event done
+[ 2019-09-13 14:43:26.00095 ] __main__ :: INFO :: 300 ||  Shutting down the workers
+[ 2019-09-13 14:43:26.00109 ] __main__ :: INFO :: 323 ||  Project closed
+[ 2019-09-13 14:43:26.00109 ] __main__ :: INFO :: 333 ||  Exiting Event Script

@@ -12,7 +12,7 @@ main:
         - "{n_tasks}"
 
         # If this > 1, workers will try to share from list of gpu devices
-        - "1"
+        - "{gpu_per_node}"
 
         - "SLURM_PROCID"
         - "2> admd.workers.launch.err 1> admd.workers.launch.out & WORKERS_APID=$!"

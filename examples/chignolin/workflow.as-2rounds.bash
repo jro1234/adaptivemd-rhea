@@ -23,17 +23,17 @@ PROJ="chignolin"
 SF="explore_macrostates"
 
 # Save frequencies. Save protein frequently to increase MSM building data
-MFREQ="20000"
-PFREQ="4000"
+MFREQ="2000"
+PFREQ="400"
 
 # Number of replicates
-N="8"
+N="4"
 
 # MD length per job in steps
-Pi="1000000"
+Pi="50000"
 
 # Total MD length for full trajectory
-Pt="2000000"
+Pt="50000"
 
 # Save logs during workflow
 export ADMD_SAVELOGS="True"
@@ -56,9 +56,7 @@ admd_checkpoint
 
 #           0 1     2     3  4   5   6 7 8   9    10       11   12     13     14        15
 admd_workload 1 $PROJ trajs $N $Pi $Pt 0 0 $SF $MINS $DBSETUP $SYS $MFREQ $PFREQ $PLATFORM
-admd_workload 1 $PROJ trajs $N $Pi $Pt 0 0 $SF $MINS $DBSETUP
 admd_workload 1 $PROJ model 1  0   0   0 0 $SF $MINS $DBSETUP
 
-admd_workload 2 $PROJ trajs $N $Pi $Pt 0 0 $SF $MINS $DBSETUP
 admd_workload 2 $PROJ trajs $N $Pi $Pt 0 0 $SF $MINS $DBSETUP
 admd_workload 2 $PROJ model 1  0   0   0 0 $SF $MINS $DBSETUP

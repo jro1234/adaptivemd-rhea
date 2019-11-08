@@ -1,0 +1,23 @@
+srun: defined options
+srun: -------------------- --------------------
+srun: (null)              : rhea-gpu1
+srun: cpus-per-task       : 14
+srun: jobid               : 4836
+srun: job-name            : admd
+srun: nodes               : 1
+srun: ntasks              : 4
+srun: verbose             : 1
+srun: -------------------- --------------------
+srun: end of defined options
+srun: jobid 4836: nodes(1):`rhea-gpu1', cpu counts: 56(x1)
+srun: CpuBindType=(null type)
+srun: launching 4836.0 on host rhea-gpu1, 4 tasks: [0-3]
+srun: route default plugin loaded
+srun: Node rhea-gpu1, 4 tasks started
+srun: forcing job termination
+srun: Complete job step 4836.0 received
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 4836.0 ON rhea-gpu1 CANCELLED AT 2019-09-13T14:43:26 ***
+srun: Received task exit notification for 4 tasks of step 4836.0 (status=0x0009).
+srun: error: rhea-gpu1: tasks 0-3: Killed
+srun: Terminating job step 4836.0

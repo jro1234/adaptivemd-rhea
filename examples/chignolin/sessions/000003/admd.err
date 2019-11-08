@@ -1,0 +1,2 @@
+/var/spool/slurm/job04837/slurm_script: line 19: wait: %1: no such job
+slurmstepd: error: *** JOB 4837 ON rhea-gpu1 CANCELLED AT 2019-09-13T14:45:01 ***

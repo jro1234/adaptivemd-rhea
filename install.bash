@@ -11,7 +11,7 @@
 #     version on your cluster with OpenMM
 #     version via configuration below
 
-#USER="jrossyra"
+USER="bif112"
 CWD="$(pwd)"
 
 # Line to install AdaptiveMD itself via this
@@ -47,16 +47,16 @@ ADMD_NETDEVICE="eth0"
 #         data vs simulation data
 
 # INSTALL_DIRNAME also the default Conda Env name
-INSTALL_DIRNAME="admd"
-ADMD_DATA="/gpfs/alpine/proj-shared/bif112/$USER/$INSTALL_DIRNAME/data"
-ADMD_SOFTWARE="/gpfs/alpine/proj-shared/bif112/$USER/$INSTALL_DIRNAME/software"
-ADMD_WORKFLOWS="/gpfs/alpine/proj-shared/bif112/$USER/$INSTALL_DIRNAME/workflows"
-ADMD_MDSYSTEMS="/gpfs/alpine/proj-shared/bif112/$USER/$INSTALL_DIRNAME/mdsystems"
-ADMD_SAMPLINGFUNCS="/gpfs/alpine/proj-shared/bif112/$USER/$INSTALL_DIRNAME/sampling"
+INSTALL_DIRNAME="admd-rhea"
+ADMD_DATA="/gpfs/alpine/proj-shared/$USER/$INSTALL_DIRNAME/data"
+ADMD_WORKFLOWS="/gpfs/alpine/proj-shared/$USER/$INSTALL_DIRNAME/workflows"
+ADMD_SOFTWARE="/ccs/proj/$USER/$INSTALL_DIRNAME/software"
+ADMD_MDSYSTEMS="/ccs/proj/$USER/$INSTALL_DIRNAME/mdsystems"
+ADMD_SAMPLINGFUNCS="/ccs/proj/$USER/$INSTALL_DIRNAME/sampling"
 
 # This file contains all required runtime
 # environment configuration, built by installer
-ADMD_PROFILE="$HOME/admd.bashrc"
+ADMD_PROFILE="$HOME/admd-rhea.bashrc"
 touch $ADMD_PROFILE
 
 #-------------------------------------------------------------------#
@@ -255,6 +255,7 @@ conda install --yes --force-reinstall pyyaml
 
 echo ">>>>>>>>>>>> ADMD_PROFILE >>>>>>>>>>>>>>>>>>>>>>>>"
 echo "export PATH=\"$ADMD_SOFTWARE/miniconda/bin:\$PATH\"" | tee -a $ADMD_PROFILE
+echo "export PATH=\"$(dirname $(which python)):\$PATH\"" | tee -a $ADMD_PROFILE
 echo "" | tee -a $ADMD_PROFILE
 echo "# 'activate' now in PATH" | tee -a $ADMD_PROFILE
 echo "# TODO maybe? conda activate $ADMD_ENV_NAME... but seems" | tee -a $ADMD_PROFILE

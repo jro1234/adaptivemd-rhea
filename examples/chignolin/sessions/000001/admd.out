@@ -1,0 +1,3 @@
+CUDA compiler: /autofs/nccs-svm1_sw/rhea/.swci/0-core/opt/spack/20180914/linux-rhel7-x86_64/intel-19.0.0/cuda-10.0.130-bsqsmexoyuynfdq65gk3glpz4tdyvzol/bin/nvcc
+new ADMD_DBURL: mongodb://172.30.144.4:33234/
+scancel 4835
