@@ -11,7 +11,7 @@
 #     version on your cluster with OpenMM
 #     version via configuration below
 
-USER="bif112"
+USER="bip189/jrob"
 CWD="$(pwd)"
 
 # Line to install AdaptiveMD itself via this
@@ -32,7 +32,7 @@ PYEMMA_VERSION="pyemma"
 OPENMM_VERSION="openmm -c omnia/label/cuda100"
 
 # CUDA module line saved in ADMD_PROFILE
-CUDA_MODULE="module load cuda"
+CUDA_MODULE="module load cuda/10.0.130"
 
 # Runtime preferences and specifics for your cluster
 ADMD_LOGLEVEL="INFO"
@@ -48,15 +48,17 @@ ADMD_NETDEVICE="eth0"
 
 # INSTALL_DIRNAME also the default Conda Env name
 INSTALL_DIRNAME="admd-rhea"
-ADMD_DATA="/gpfs/alpine/proj-shared/$USER/$INSTALL_DIRNAME/data"
-ADMD_WORKFLOWS="/gpfs/alpine/proj-shared/$USER/$INSTALL_DIRNAME/workflows"
+WORK_DIRNAME="admd-summit"
+
+ADMD_DATA="/gpfs/alpine/proj-shared/$USER/$WORK_DIRNAME/data"
+ADMD_WORKFLOWS="/gpfs/alpine/proj-shared/$USER/$WORK_DIRNAME/workflows"
 ADMD_SOFTWARE="/ccs/proj/$USER/$INSTALL_DIRNAME/software"
-ADMD_MDSYSTEMS="/ccs/proj/$USER/$INSTALL_DIRNAME/mdsystems"
+ADMD_MDSYSTEMS="/ccs/proj/$USER/$WORK_DIRNAME/mdsystems"
 ADMD_SAMPLINGFUNCS="/ccs/proj/$USER/$INSTALL_DIRNAME/sampling"
 
 # This file contains all required runtime
 # environment configuration, built by installer
-ADMD_PROFILE="$HOME/admd-rhea.bashrc"
+ADMD_PROFILE="/ccs/proj/$USER/admd-rhea-withsummit.bashrc"
 touch $ADMD_PROFILE
 
 #-------------------------------------------------------------------#
