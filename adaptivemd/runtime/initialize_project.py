@@ -63,6 +63,7 @@ def initialize_project(p_name, sys_name=None, m_freq=None, p_freq=None, platform
                                "source package 'examples/files' directory".format(sys_name)) )
 
         f_structure  = File(f_base + f_name).load()
+        f_structure.name = 'pdbfile'
         f_system     = File(f_base + 'system.xml').load()
         f_integrator = File(f_base + 'integrator.xml').load()
 
